@@ -5,15 +5,13 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
 
 	public Transform bullet;
-	public Transform gunSpawnL;
-	public Transform gunSpawnR;
+	public Transform[] gunSpawns;
 
 	public float  fireRate = 0.5f;
-	public float randomRate = 0.1f;
+	public Vector2 randomRate;
 	private bool boostMode = false;
 	private float boost = 1.0f;
-	private float nextFireL;
-	private float nextFireR;
+	private float nextFire;
 
 	private AudioSource audioShoot;
 
@@ -32,21 +30,42 @@ public class PlayerController : MonoBehaviour {
 			boostMode = false;
 
 		CheckBoostMode();
-		if (Input.GetButton("Fire1") && Time.time > nextFireL)
+		if (Input.GetButton("Fire1") && Time.time > nextFire)
 		{
-			float random = Random.Range(0.0f, randomRate);
-			nextFireL = Time.time + (fireRate * boost) + random;
-			Transform shotL = Instantiate(bullet, gunSpawnL.position, gunSpawnL.rotation);
-			Destroy(shotL.gameObject, 2.0f);
-			audioShoot.Play();
-		}		
+			FireAll();
+		}
+	}
 
-		if (Input.GetButton("Fire1") && Time.time > nextFireR)
+	private void FireAll()
+	{
+		if (boostMode == false)
 		{
-			float random = Random.Range(0.0f, randomRate);
-			nextFireR = Time.time + (fireRate * boost) + random;
-			Transform shotR = Instantiate(bullet, gunSpawnR.position, gunSpawnR.rotation);
-			Destroy(shotR.gameObject, 2.0f);
+			Fire(gunSpawns[0]);
+		}
+
+		if (boostMode == true)
+		{
+			foreach (var gunSpawn in gunSpawns)
+			{
+				Fire(gunSpawn);
+			}
+		}
+	}
+
+	private void Fire(Transform gunSpawn)
+	{
+		Random.InitState((int) Time.time);
+		float random = Random.Range(randomRate.x, randomRate.y);
+		nextFire = Time.time + (fireRate * boost) + random;
+
+		Transform shot = Instantiate(bullet, gunSpawn.position, gunSpawn.rotation);
+		float speed = shot.gameObject.GetComponent<MoveScript>().speed;
+		shot.gameObject.GetComponent<Rigidbody>().velocity = shot.forward * speed;
+		Destroy(shot.gameObject, 2.0f);
+
+		if (gunSpawn.name == "GunF")
+		{
+			audioShoot.Play();
 		}
 	}
 

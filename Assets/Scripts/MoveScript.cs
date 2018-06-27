@@ -2,26 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveScript : MonoBehaviour {
+public class MoveScript : MonoBehaviour
+{
 
-	private Rigidbody rb;
 	public float speed = 10.0f;
+	public Vector2 randomSpeed = new Vector2(0.5f, 1.5f);
+	private Rigidbody rb;
 
-	// Use this for initialization
 	void Start ()
 	{
 		rb = GetComponent<Rigidbody>();
 	}
-	
-	// Update is called once per frame
-	void Update ()
+
+	void FixedUpdate()
 	{
 		
-	}
-
-	private void FixedUpdate()
-	{
-		Vector3 movement = Vector3.forward;
-		rb.velocity = movement * speed;
+		rb.velocity = Vector3.forward * speed * Random.Range(randomSpeed.x, randomSpeed.y);
 	}
 }

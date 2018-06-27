@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class DestroyByContact : MonoBehaviour
 {
-	public GameObject explosionAsteroid;
+	public GameObject explosion;
 	public GameObject explosionPlayer;
 
 	public int pointsToAdd = 10;
 
 	private GameController gameController;
+	private Rigidbody rb;
 
 	private void Start()
 	{
+		rb = GetComponent<Rigidbody>();
+
 		GameObject gameControllerObject = GameObject.FindWithTag("GameController");
 		if (gameControllerObject != null)
 		{
@@ -27,14 +30,21 @@ public class DestroyByContact : MonoBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
-		if (other.tag == "Boundary")
+		if (other.CompareTag("Boundary") || other.CompareTag("Enemy"))
 		{
 			return;
 		}
-		Instantiate(explosionAsteroid, transform.position, transform.rotation);
+
+		if (explosion != null)
+		{
+			GameObject exp =  Instantiate(explosion, transform.position, transform.rotation);
+			exp.GetComponent<Rigidbody>().velocity = rb.velocity;
+		}
+
 		if (other.tag == "Player")
 		{
-			Instantiate(explosionPlayer, other.transform.position, other.transform.rotation);
+			GameObject exp = Instantiate(explosionPlayer, other.transform.position, other.transform.rotation);
+			exp.GetComponent<Rigidbody>().velocity = other.gameObject.GetComponent<Rigidbody>().velocity;
 			gameController.GameOver();
 		}
 		gameController.AddScore(pointsToAdd);
