@@ -124,7 +124,7 @@ GameObject:
   m_Layer: 0
   m_Name: GunF
   m_TagString: Untagged
-  m_Icon: {fileID: -3839803715187477772, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -135,7 +135,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 48614293}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.077, z: 0.039}
+  m_LocalPosition: {x: 0, y: -0.078, z: 0.917}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1394398226}
@@ -254,8 +254,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 0.30514705, g: 0.31455377, b: 0.5, a: 1}
-  m_Intensity: 0.03
+  m_Color: {r: 0.7294118, g: 0.7176471, b: 0.03529412, a: 1}
+  m_Intensity: 0.37
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -324,7 +324,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.05
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -691,8 +691,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 0.37208048, g: 0.3803857, b: 0.5441177, a: 1}
-  m_Intensity: 0.3
+  m_Color: {r: 0.29803923, g: 0.28627452, b: 0.45098042, a: 1}
+  m_Intensity: 0.97
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -729,7 +729,7 @@ GameObject:
   m_Layer: 0
   m_Name: GunR
   m_TagString: Untagged
-  m_Icon: {fileID: -3839803715187477772, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -739,13 +739,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 845658950}
-  m_LocalRotation: {x: 0, y: -0.008726465, z: 0, w: 0.999962}
-  m_LocalPosition: {x: 0.167, y: 0.037, z: 0.293}
+  m_LocalRotation: {x: 0, y: -0.004363368, z: 0, w: 0.9999905}
+  m_LocalPosition: {x: 0.158, y: 0.037, z: 0.293}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1394398226}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: -1, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -0.5, z: 0}
 --- !u!1 &1025978790
 GameObject:
   m_ObjectHideFlags: 0
@@ -808,7 +808,7 @@ MonoBehaviour:
   - {fileID: 1641066503344712, guid: fb5cae6fd111642cb93217b9d00fa202, type: 2}
   - {fileID: 1170591102436924, guid: e76e6566682534b26b3bace8a0be0df7, type: 2}
   - {fileID: 1564594883240878, guid: 6eecd459f34df481eb3679b162b18f23, type: 2}
-  spawnValues: {x: 6, y: 0, z: 11}
+  spawnValues: {x: 5, y: 0, z: 11}
   hazardCount: 10
   startWait: 2
   spawnWaitMax: 1
@@ -1057,7 +1057,7 @@ MonoBehaviour:
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
-    m_VerticalOverflow: 0
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: 'Restart text
 
@@ -1210,7 +1210,7 @@ GameObject:
   m_Layer: 0
   m_Name: GunL
   m_TagString: Untagged
-  m_Icon: {fileID: -3839803715187477772, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1220,13 +1220,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1214376846}
-  m_LocalRotation: {x: 0, y: 0.008726558, z: 0, w: 0.999962}
-  m_LocalPosition: {x: -0.163, y: 0.037, z: 0.293}
+  m_LocalRotation: {x: 0, y: 0.004363274, z: 0, w: 0.9999905}
+  m_LocalPosition: {x: -0.156, y: 0.037, z: 0.293}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1394398226}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 1, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0.5, z: 0}
 --- !u!1 &1394398223
 GameObject:
   m_ObjectHideFlags: 0
@@ -1291,6 +1291,7 @@ Transform:
   - {fileID: 1214376847}
   - {fileID: 845658951}
   - {fileID: 48614294}
+  - {fileID: 1689512523}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1305,11 +1306,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16d5324edacd14d0e80dc6cd6cc50a4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 4377479343884664, guid: 38f8efd61a2694e6bb3c48179a81504d, type: 2}
+  bullet_small: {fileID: 4377479343884664, guid: 38f8efd61a2694e6bb3c48179a81504d,
+    type: 2}
+  bullet_big: {fileID: 4377479343884664, guid: d859b762bbf9b4c4ebb45d9002821791, type: 2}
   gunSpawns:
   - {fileID: 48614294}
   - {fileID: 1214376847}
   - {fileID: 845658951}
+  - {fileID: 1689512523}
   fireRate: 0.2
   randomRate: {x: 0, y: 0.2}
 --- !u!114 &1394398228
@@ -1329,7 +1333,8 @@ MonoBehaviour:
     MinZ: -8.5
     MaxZ: 4
   speed: 10
-  tilt: 3
+  tilt: 5
+  mouseSmoothTime: 0.2
 --- !u!82 &1394398229
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1451,8 +1456,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb21ad6ba66334129a6ec3c35c671a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scrollSpeed: -0.1
+  scrollSpeed: -0.3
   tileSizeZ: 20
+--- !u!1 &1689512522
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1689512523}
+  m_Layer: 0
+  m_Name: GunS
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1689512523
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1689512522}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.562, y: -0.078, z: -0.513}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1394398226}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1917142970
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// Weapon controller for the enemies ships
+/// </summary>
 public class WeaponController : MonoBehaviour
 {
 	public GameObject shot;
@@ -15,6 +18,8 @@ public class WeaponController : MonoBehaviour
 	private void Start()
 	{
 		audioSource = GetComponent<AudioSource>();
+
+		// Invoque 'Fire' method after delay, then every fireRate seconds.
 		InvokeRepeating("Fire", delay, fireRate);
 	}
 

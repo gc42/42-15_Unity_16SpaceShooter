@@ -16,6 +16,7 @@ public class BGScrolling : MonoBehaviour
 
 	void Update ()
 	{
+		// Scroll background by time, and repeat with tileSize step on Z axe.
 		float newPosition = Mathf.Repeat(Time.time * scrollSpeed, tileSizeZ);
 		transform.position = startPosition + Vector3.forward * newPosition;
 	}
